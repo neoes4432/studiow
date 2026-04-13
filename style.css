@@ -1,12 +1,11 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color: #fff;
+    background-color: #0a0a0a; /* 真っ黒をやめて目に優しい墨色に */
+    color: #f0f0f0; /* 文字も少しだけ柔らかい白に */
     font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-/* ヘッダー周りの調整 */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -16,15 +15,14 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(10, 10, 10, 0.9); /* 背景色に合わせる */
     backdrop-filter: blur(10px);
     z-index: 1000;
     box-sizing: border-box;
 }
 
-/* ロゴを見やすく反転 */
 .logo, .main-logo {
-    filter: invert(1); /* 黒文字ロゴを白く反転 */
+    filter: invert(1);
     height: auto;
 }
 
@@ -40,6 +38,8 @@ body {
 .main-nav {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
     gap: 30px;
 }
 
@@ -50,7 +50,6 @@ body {
     letter-spacing: 0.1em;
 }
 
-/* コンテンツ中央配置 */
 .container {
     max-width: 800px;
     margin: 140px auto 0;
@@ -68,24 +67,30 @@ video {
     border: 1px solid #333;
 }
 
+/* 各セクションをカード型に変更して見やすくする */
 .content {
     text-align: left;
-    border-top: 1px solid #333;
-    padding: 100px 0;
+    background-color: #141414; /* 墨色より少し明るい黒 */
+    border: 1px solid #222;    /* 薄い枠線 */
+    border-radius: 12px;       /* 角を少し丸く */
+    padding: 50px;             /* 内側の余白 */
+    margin-bottom: 60px;
+    scroll-margin-top: 120px;  /* メニューに隠れないようにする設定 */
 }
 
 h2 {
-    color: #666;
+    color: #888;
     font-size: 0.9rem;
     letter-spacing: 0.2em;
-    margin-bottom: 40px;
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 .production-notes {
-    background: #111;
+    background: #1a1a1a;
     padding: 20px;
     margin-top: 30px;
-    border-left: 1px solid #444;
+    border-left: 2px solid #555;
 }
 
 .social-links {
@@ -93,9 +98,10 @@ h2 {
     gap: 40px;
 }
 
-.footer {
-    padding: 80px 0;
-    text-align: center;
-    color: #444;
-    font-size: 0.8rem;
+.link {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
 }
+
+.footer {
