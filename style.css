@@ -8,47 +8,49 @@ body {
     line-height: 1.8;
 }
 
-/* ヘッダー：見本のナビゲーションスタイルを反映 */
+/* ヘッダー全体のデザイン修正 */
 .page-header {
     display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    position: sticky;
+    justify-content: space-between; /* これで左右に振り分けます */
+    align-items: center;           /* 上下中央に揃えます */
+    padding: 20px 5%;              /* 左右に少し余白を作ります */
+    position: fixed;               /* 上部に固定 */
+    width: 100%;                   /* 横幅いっぱい */
     top: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
-    z-index: 100;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* 少し濃くして文字を見やすく */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-sizing: border-box;        /* パディングを含めた横幅計算 */
 }
 
+/* メニューの並び */
 .main-nav {
     display: flex;
     list-style: none;
-    padding: 0;
     margin: 0;
-    gap: 40px;
+    padding: 0;
+    gap: 30px;
 }
 
 .main-nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
 .main-nav a:hover {
     color: #888;
 }
 
-/* メインコンテンツ */
+/* ページ全体の余白調整（ヘッダーが被らないように） */
 .container {
-    max-width: 800px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 60px 0;
-    text-align: center;
+    margin-top: 100px; /* ヘッダーの高さ分、コンテンツを下げる */
 }
+
 
 .logo img {
     max-width: 180px;
@@ -123,46 +125,4 @@ h2 {
     text-align: center;
     font-size: 0.7rem;
     color: #444;
-}
-/* ヘッダー全体のデザイン修正 */
-.page-header {
-    display: flex;
-    justify-content: space-between; /* これで左右に振り分けます */
-    align-items: center;           /* 上下中央に揃えます */
-    padding: 20px 5%;              /* 左右に少し余白を作ります */
-    position: fixed;               /* 上部に固定 */
-    width: 100%;                   /* 横幅いっぱい */
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.9); /* 少し濃くして文字を見やすく */
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    box-sizing: border-box;        /* パディングを含めた横幅計算 */
-}
-
-/* メニューの並び */
-.main-nav {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 30px;
-}
-
-.main-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    transition: 0.3s;
-}
-
-.main-nav a:hover {
-    color: #888;
-}
-
-/* ページ全体の余白調整（ヘッダーが被らないように） */
-.container {
-    margin-top: 100px; /* ヘッダーの高さ分、コンテンツを下げる */
 }
