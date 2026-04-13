@@ -17,13 +17,14 @@ body {
     text-align: center;
 }
 
+/* ロゴの調整：白い四角を消し、透過させて白く見せる */
 .logo img {
-    max-width: 200px;
+    max-width: 180px;  /* 少しだけ小ぶりに（お好みで） */
     height: auto;
     margin-bottom: 60px;
-    background-color: #fff; /* 背景を白にする */
-    padding: 10px;          /* ロゴの周りに少し余白を作る */
-    border-radius: 4px;     /* 角を少し丸くする（お好みで） */
+    background-color: transparent; /* 背景を透明に */
+    filter: invert(1);             /* 黒文字を強制的に白文字に反転 */
+    opacity: 0.9;                  /* ギラギラしないよう、少しだけ透明に */
 }
 
 .video-container {
@@ -34,25 +35,30 @@ body {
 
 video {
     width: 100%;
-    border: 1px solid #333;
+    border: 1px solid #333; /* 落ち着いた色の枠線 */
     background: #111;
 }
 
+/* 見出しの調整 */
 h1 {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: #ccc;
+    font-size: 1.1rem; /* 少し小さく */
+    font-weight: 300;   /* 文字を細くして洗練させる */
+    color: #ccc;        /* 純白ではなく、落ち着いたグレーに */
     margin-bottom: 80px;
+    letter-spacing: 0.1em; /* 文字の間隔を空けて余白を出す */
 }
 
+/* コンセプト部分の調整 */
 .content {
     text-align: left;
     border-top: 1px solid #333;
     padding-top: 40px;
+    color: #bbb; /* 文字を少し落ち着かせる */
 }
 
 h2 {
     font-size: 1rem;
-    color: #666;
+    color: #666; /* 項目名はさらに控えめに */
     text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
