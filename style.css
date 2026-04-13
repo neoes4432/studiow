@@ -62,3 +62,88 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
+/* 既存のコードの最後に追記、または全部上書き */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 60px;
+}
+
+.video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 40px;
+}
+
+video {
+    width: 100%;
+    border: 1px solid #333;
+    background: #111;
+}
+
+h1 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #ccc;
+    margin-bottom: 80px;
+    letter-spacing: 0.1em;
+}
+
+.content {
+    text-align: left;
+    border-top: 1px solid #333;
+    padding: 40px 0;
+    width: 100%;
+}
+
+h2 {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.specs {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.specs li {
+    margin-bottom: 5px;
+}
+
+.specs li span {
+    color: #666;
+    margin-right: 10px;
+    display: inline-block;
+    width: 80px;
+}
