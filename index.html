@@ -5,64 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STUDIO W | Portfolio</title>
     <style>
-        /* 外部CSSが読み込めなくても動くように、ここに直接スタイルを書きます */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #fff;
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.8;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .container {
-            max-width: 800px;
-            width: 90%;
-            padding: 60px 0;
-            text-align: center;
-        }
-        /* ロゴの代わりの仮ボックス */
-        .logo-placeholder {
-            font-size: 2rem;
-            font-weight: bold;
-            letter-spacing: 0.3em;
-            margin-bottom: 60px;
-        }
-        /* 動画の代わりの仮ボックス */
-        .video-placeholder {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            background-color: #111;
-            border: 1px solid #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #444;
-            margin-bottom: 40px;
-        }
-        h1 {
-            font-size: 1.2rem;
-            font-weight: 300;
-            color: #ccc;
-            margin-bottom: 80px;
-        }
-        .content {
-            text-align: left;
-            border-top: 1px solid #333;
-            padding-top: 40px;
-        }
+        body { margin: 0; padding: 0; background-color: #000; color: #fff; font-family: "Helvetica Neue", Arial, sans-serif; line-height: 1.8; display: flex; flex-direction: column; align-items: center; }
+        .container { max-width: 800px; width: 90%; padding: 60px 0; text-align: center; }
+        .logo img { max-width: 200px; height: auto; margin-bottom: 60px; }
+        .video-container { width: 100%; aspect-ratio: 16 / 9; margin-bottom: 40px; }
+        video { width: 100%; border: 1px solid #333; }
+        h1 { font-size: 1.2rem; font-weight: 300; color: #ccc; margin-bottom: 80px; }
+        .content { text-align: left; border-top: 1px solid #333; padding-top: 40px; }
         h2 { font-size: 1rem; color: #666; text-transform: uppercase; }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <div class="logo-placeholder">STUDIO W</div>
+        <div class="logo">
+            <img src="アートボード 1.png" alt="STUDIO W Logo">
+        </div>
 
-        <div class="video-placeholder">
-            VIDEO PLAYER (COMING SOON)
+        <div class="video-container">
+            <video src="hpどうが4.mp4" autoplay muted loop playsinline controls></video>
         </div>
 
         <h1>アナログな思考を、デジタルな洗練へ</h1>
@@ -72,6 +32,5 @@
             <p>万年筆から始まる物語を通じ、伝統的な信頼感とモダンな感性の融合を表現。情報の蓄積から本質を抽出するプロセスを視覚化しています。</p>
         </div>
     </div>
-
 </body>
 </html>
