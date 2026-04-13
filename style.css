@@ -4,15 +4,14 @@ body {
     background-color: #000;
     color: #fff;
     font-family: "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.8;
 }
 
-/* ヘッダー：左右に広がるように修正 */
+/* ヘッダー周りの調整 */
 .page-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%; /* 左右に5%の余白 */
+    padding: 20px 5%;
     position: fixed;
     width: 100%;
     top: 0;
@@ -23,46 +22,45 @@ body {
     box-sizing: border-box;
 }
 
-/* ヘッダーのロゴサイズ */
-.header-logo {
-    height: 30px; /* 小さくスタイリッシュに */
-    width: auto;
+/* ロゴを見やすく反転 */
+.logo, .main-logo {
+    filter: invert(1); /* 黒文字ロゴを白く反転 */
+    height: auto;
+}
+
+.logo {
+    height: 30px;
+}
+
+.main-logo {
+    max-width: 250px;
+    margin-bottom: 40px;
 }
 
 .main-nav {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
     gap: 30px;
 }
 
 .main-nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
 }
 
-/* コンテンツ全体を中央寄せ */
+/* コンテンツ中央配置 */
 .container {
-    max-width: 900px; /* 少し広げてバランス調整 */
-    margin: 120px auto 0; /* 上に余白、左右は自動で中央 */
+    max-width: 800px;
+    margin: 140px auto 0;
     padding: 0 20px;
     text-align: center;
 }
 
-/* メインロゴのサイズ */
-.main-logo img {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 60px;
-}
-
 .video-container {
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 video {
@@ -73,32 +71,31 @@ video {
 .content {
     text-align: left;
     border-top: 1px solid #333;
-    padding: 80px 0;
-    margin: 0 auto;
-    width: 100%;
+    padding: 100px 0;
+}
+
+h2 {
+    color: #666;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 40px;
 }
 
 .production-notes {
     background: #111;
     padding: 20px;
-    margin: 20px 0;
+    margin-top: 30px;
     border-left: 1px solid #444;
 }
 
 .social-links {
     display: flex;
-    gap: 30px;
-}
-
-.link {
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 1px solid #333;
+    gap: 40px;
 }
 
 .footer {
-    padding: 60px 0;
+    padding: 80px 0;
     text-align: center;
-    font-size: 0.7rem;
     color: #444;
+    font-size: 0.8rem;
 }
