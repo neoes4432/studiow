@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="page-header">
+        <nav>
+            <ul class="main-nav">
+                <li><a href="#concept">Concept</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="container">
         <div class="logo">
             <img src="assets/アートボード 1.png" alt="STUDIO W Logo">
@@ -18,42 +28,45 @@
 
         <h1>アナログな思考を、デジタルな洗練へ</h1>
 
-        <div class="content">
+        <section id="concept" class="content">
             <h2>Concept</h2>
             <p>万年筆から始まる物語を通じ、伝統的な信頼感とモダンな感性の融合を表現。情報の蓄積から本質を抽出するプロセスを視覚化しています。</p>
-        </div>
+        </section>
 
-        <div class="content">
+        <section id="works" class="content">
             <h2>Works</h2>
             <div class="works-item">
                 <h3>STUDIO W Brand Movie</h3>
-                <p>「起源・記録・蓄積・洗練・定着」の5工程で構成されたブランドムービー。ノートに書き込まれた膨大な情報が、最終的に一つのロゴへ収束していくプロセスを15秒で表現しました。</p>
+                <p>「起源・記録・蓄積・洗練・定着」の5工程で構成されたブランドムービー。ノートに書き込まれた膨大な情報が、最終的に一つのロゴへ収束していくプロセスを表現しました。</p>
                 
                 <div class="production-notes">
                     <h4>Production Points</h4>
                     <ul>
                         <li><span>視線誘導:</span> 終盤の露光量調整により、視聴者の意識を自然にロゴへ集中させる演出</li>
-                        <li><span>視認性:</span> Premiere Proの反転エフェクトを活用し、暗い背景でもロゴが映えるよう調整</li>
                         <li><span>設計:</span> 緻密なタイポグラフィにより、Web制作における「精緻さ」を強調</li>
                     </ul>
                 </div>
 
                 <ul class="specs">
                     <li><span>Tools:</span> Premiere Pro / Illustrator</li>
-                    <li><span>Category:</span> Motion Graphics / Concept Movie</li>
-                    <li><span>Duration:</span> 15sec</li>
+                    <li><span>Category:</span> Concept Movie</li>
                 </ul>
             </div>
-        </div>
-    </div>
-</body>
-</html>
-<div class="content">
+        </section>
+
+        <section id="contact" class="content">
             <h2>Contact</h2>
-            <p>制作のご依頼やご相談は、以下のリンクまたはメールにてお気軽にお問い合わせください。</p>
+            <p>制作のご依頼やご相談は、下記よりお気軽にお問い合わせください。</p>
             <div class="social-links">
                 <a href="mailto:your-email@example.com" class="link">Email</a>
-                <a href="https://instagram.com/your-profile" target="_blank" class="link">Instagram</a>
-                <a href="https://x.com/your-profile" target="_blank" class="link">X (Twitter)</a>
+                <a href="#" class="link">Instagram</a>
+                <a href="#" class="link">X (Twitter)</a>
             </div>
-        </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 STUDIO W</p>
+    </footer>
+</body>
+</html>
