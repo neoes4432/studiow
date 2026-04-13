@@ -1,3 +1,4 @@
+/* 全体設定 */
 body {
     margin: 0;
     padding: 0;
@@ -5,79 +6,46 @@ body {
     color: #fff;
     font-family: "Helvetica Neue", Arial, sans-serif;
     line-height: 1.8;
+}
+
+/* ヘッダー：見本のナビゲーションスタイルを反映 */
+.page-header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 100;
 }
 
-.container {
-    max-width: 800px;
-    width: 90%;
-    padding: 60px 0;
-    text-align: center;
+.main-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 40px;
 }
 
-/* ロゴの調整：白い四角を消し、透過させて白く見せる */
-.logo img {
-    max-width: 180px;  /* 少しだけ小ぶりに（お好みで） */
-    height: auto;
-    margin-bottom: 60px;
-    background-color: transparent; /* 背景を透明に */
-    filter: invert(1);             /* 黒文字を強制的に白文字に反転 */
-    opacity: 0.9;                  /* ギラギラしないよう、少しだけ透明に */
-}
-
-.video-container {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    margin-bottom: 40px;
-}
-
-video {
-    width: 100%;
-    border: 1px solid #333; /* 落ち着いた色の枠線 */
-    background: #111;
-}
-
-/* 見出しの調整 */
-h1 {
-    font-size: 1.1rem; /* 少し小さく */
-    font-weight: 300;   /* 文字を細くして洗練させる */
-    color: #ccc;        /* 純白ではなく、落ち着いたグレーに */
-    margin-bottom: 80px;
-    letter-spacing: 0.1em; /* 文字の間隔を空けて余白を出す */
-}
-
-/* コンセプト部分の調整 */
-.content {
-    text-align: left;
-    border-top: 1px solid #333;
-    padding-top: 40px;
-    color: #bbb; /* 文字を少し落ち着かせる */
-}
-
-h2 {
-    font-size: 1rem;
-    color: #666; /* 項目名はさらに控えめに */
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-}
-/* 既存のコードの最後に追記、または全部上書き */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #fff;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    transition: color 0.3s;
 }
 
+.main-nav a:hover {
+    color: #888;
+}
+
+/* メインコンテンツ */
 .container {
     max-width: 800px;
     width: 90%;
+    margin: 0 auto;
     padding: 60px 0;
     text-align: center;
 }
@@ -97,21 +65,20 @@ body {
 video {
     width: 100%;
     border: 1px solid #333;
-    background: #111;
 }
 
 h1 {
     font-size: 1.1rem;
     font-weight: 300;
-    color: #ccc;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
     letter-spacing: 0.1em;
+    color: #ccc;
 }
 
 .content {
     text-align: left;
     border-top: 1px solid #333;
-    padding: 40px 0;
+    padding: 80px 0;
     width: 100%;
 }
 
@@ -120,89 +87,27 @@ h2 {
     color: #666;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-h3 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 15px;
-}
-
-.specs {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-    font-size: 0.85rem;
-    color: #888;
-}
-
-.specs li {
-    margin-bottom: 5px;
-}
-
-.specs li span {
-    color: #666;
-    margin-right: 10px;
-    display: inline-block;
-    width: 80px;
-}
-/* 前回のCSSに以下を追加、または上書き */
-
+/* 制作ノートとスペック */
 .production-notes {
     background: #111;
     padding: 20px;
     margin: 20px 0;
-    border-left: 2px solid #333;
-}
-
-.production-notes h4 {
-    font-size: 0.8rem;
-    color: #888;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.production-notes ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    border-left: 1px solid #444;
 }
 
 .production-notes li {
     font-size: 0.9rem;
-    margin-bottom: 10px;
-    color: #ccc;
+    color: #bbb;
+    margin-bottom: 80px;
 }
 
-.production-notes li span {
-    font-weight: bold;
-    color: #fff;
-    margin-right: 10px;
-}
-
-/* 既存のspecsを調整 */
-.specs {
-    list-style: none;
-    padding: 0;
-    margin-top: 30px;
-    font-size: 0.8rem;
-    color: #666;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.specs li span {
-    color: #444;
-    margin-right: 5px;
-    width: auto;
-}
 .social-links {
-    margin-top: 20px;
     display: flex;
     gap: 30px;
+    margin-top: 20px;
 }
 
 .link {
@@ -211,10 +116,11 @@ h3 {
     font-size: 0.9rem;
     border-bottom: 1px solid #333;
     padding-bottom: 2px;
-    transition: 0.3s;
 }
 
-.link:hover {
-    color: #888;
-    border-color: #888;
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #444;
 }
