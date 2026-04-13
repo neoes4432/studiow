@@ -21,6 +21,9 @@ body {
     max-width: 200px;
     height: auto;
     margin-bottom: 60px;
+    background-color: #fff; /* 背景を白にする */
+    padding: 10px;          /* ロゴの周りに少し余白を作る */
+    border-radius: 4px;     /* 角を少し丸くする（お好みで） */
 }
 
 .video-container {
