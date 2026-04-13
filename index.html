@@ -4,38 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STUDIO W | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 外部CSSが読み込めなくても動くように、ここに直接スタイルを書きます */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 90%;
+            padding: 60px 0;
+            text-align: center;
+        }
+        /* ロゴの代わりの仮ボックス */
+        .logo-placeholder {
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 0.3em;
+            margin-bottom: 60px;
+        }
+        /* 動画の代わりの仮ボックス */
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: #111;
+            border: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #ccc;
+            margin-bottom: 80px;
+        }
+        .content {
+            text-align: left;
+            border-top: 1px solid #333;
+            padding-top: 40px;
+        }
+        h2 { font-size: 1rem; color: #666; text-transform: uppercase; }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="assets/アートボード 1.png" alt="STUDIO W Logo">
+
+    <div class="container">
+        <div class="logo-placeholder">STUDIO W</div>
+
+        <div class="video-placeholder">
+            VIDEO PLAYER (COMING SOON)
         </div>
-    </header>
 
-    <main>
-        <section class="hero">
-            <video src="assets/movie.mp4" controls autoplay muted loop></video>
-            <h1>アナログな思考を、デジタルな洗練へ</h1>
-        </section>
+        <h1>アナログな思考を、デジタルな洗練へ</h1>
 
-        <section class="concept">
+        <div class="content">
             <h2>Concept</h2>
             <p>万年筆から始まる物語を通じ、伝統的な信頼感とモダンな感性の融合を表現。情報の蓄積から本質を抽出するプロセスを視覚化しています。</p>
-            
-            <div class="points">
-                <h3>Production Points</h3>
-                <ul>
-                    <li><strong>ロゴの視認性:</strong> Premiere Proの反転エフェクトを活用。</li>
-                    <li><strong>視線誘導:</strong> 露光量調整によるロゴへの集中。</li>
-                    <li><strong>タイポグラフィ:</strong> 緻密さと洗練を強調した文字間隔。</li>
-                </ul>
-            </div>
-        </section>
-    </main>
+        </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2026 STUDIO W</p>
-    </footer>
 </body>
 </html>
