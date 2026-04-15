@@ -9,10 +9,8 @@ body {
     background-color: #0a0a0a;
     color: #f0f0f0;
     font-family: "Helvetica Neue", Arial, sans-serif;
-    overflow-x: hidden;
 }
 
-/* ヘッダー全体 */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -29,7 +27,6 @@ body {
     z-index: 1000;
 }
 
-/* 左上のロゴ：白 */
 .logo-link-white {
     color: #fff !important;
     text-decoration: none;
@@ -41,8 +38,6 @@ body {
 .main-nav {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
     gap: 30px;
 }
 
@@ -51,11 +46,7 @@ body {
     text-decoration: none;
     font-size: 0.8rem;
     text-transform: uppercase;
-    opacity: 0.7;
-    transition: 0.3s;
 }
-
-.main-nav a:hover { opacity: 1; }
 
 .container {
     max-width: 900px;
@@ -64,45 +55,29 @@ body {
     text-align: center;
 }
 
-/* 中央ロゴエリア：フィルタを削除して青色を表示 */
 .main-logo-area {
     width: 100%;
     height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .main-logo {
     max-width: 300px;
     width: 80%;
     height: auto;
-    filter: none;
 }
 
-.catchphrase {
-    font-size: 1.5rem;
-    margin-bottom: 100px;
-    letter-spacing: 0.1em;
-}
-
-.video-container { width: 100%; margin-bottom: 100px; }
-video { width: 100%; border: 1px solid #333; }
+.video-container { width: 100%; margin: 50px 0; }
+video { width: 100%; }
 
 .content {
     text-align: left;
     background-color: #141414;
-    border: 1px solid #222;
-    border-radius: 12px;
-    padding: 50px;
-    margin-bottom: 80px;
+    padding: 40px;
+    margin-bottom: 50px;
 }
 
-h2 { color: #888; font-size: 0.9rem; letter-spacing: 0.2em; text-transform: uppercase; }
-
-.social-links { display: flex; gap: 30px; margin-top: 20px; }
-.link-icon { color: #fff !important; font-size: 1.8rem; text-decoration: none; transition: 0.3s; opacity: 0.8; }
-.link-icon:hover { opacity: 0.5; transform: translateY(-3px); }
-
-.footer { padding: 50px 0; opacity: 0.4; font-size: 0.8rem; }
+.footer { padding: 50px 0; opacity: 0.4; }
