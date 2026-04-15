@@ -113,3 +113,22 @@ h2 {
 }
 
 .footer {
+/* SNSアイコンのデザイン */
+.social-links {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.link-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+.link-icon:hover {
+    opacity: 0.5;
+    transform: translateY(-3px);
+}
