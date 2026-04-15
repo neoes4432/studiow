@@ -57,7 +57,7 @@ body {
 
 .main-nav a:hover { opacity: 1; }
 
-/* メインエリア */
+/* コンテナ */
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -65,7 +65,7 @@ body {
     text-align: center;
 }
 
-/* 中央ロゴ：青い画像をそのまま表示 */
+/* 中央ロゴエリア */
 .main-logo-area {
     width: 100%;
     height: 60vh;
@@ -79,7 +79,7 @@ body {
     max-width: 300px;
     width: 80%;
     height: auto;
-    /* 白くする設定を完全に削除 */
+    /* 白くする設定(filter)を完全に削除しました。これで青いまま表示されます */
 }
 
 .catchphrase {
@@ -103,7 +103,7 @@ video { width: 100%; border: 1px solid #333; }
 h2 { color: #888; font-size: 0.9rem; letter-spacing: 0.2em; text-transform: uppercase; }
 
 .social-links { display: flex; gap: 30px; margin-top: 20px; }
-.link-icon { color: #fff; font-size: 1.8rem; text-decoration: none; transition: 0.3s; opacity: 0.8; }
+.link-icon { color: #fff !important; font-size: 1.8rem; text-decoration: none; transition: 0.3s; opacity: 0.8; }
 .link-icon:hover { opacity: 0.5; transform: translateY(-3px); }
 
 .footer { padding: 50px 0; opacity: 0.4; font-size: 0.8rem; }
