@@ -29,13 +29,51 @@ body {
     z-index: 1000;
 }
 
+/* --- ロゴ関連のスタイル --- */
+
+/* 共通：ロゴのリンク（左上ロゴ、中央ロゴ、フッターロゴすべてに適用） */
 .logo-link {
-    color: #fff;
     text-decoration: none;
-    letter-spacing: 0.2em;
-    font-weight: bold;
-    font-size: 1.2rem;
+    transition: color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 }
+
+/* 共通：ロゴのテキストの色を白から青へ、そして太く */
+.logo-text, .logo-link span {
+    color: #0047AB !important; /* 白(#fff)からコバルトブルーに変更 */
+    font-weight: 700 !important; /* 太くして視認性を確保 */
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+/* ホバー時の色（少し明るい青） */
+.logo-link:hover .logo-text, .logo-link:hover span {
+    color: #4169E1 !important; /* ロイヤルブルー */
+}
+
+/* --- 各配置独自の調整 --- */
+
+/* 1. ヘッダー（左上）ロゴテキスト */
+.page-header h1 .logo-link span {
+    font-size: 1.1rem;
+}
+
+/* 2. 中央の大きなロゴテキスト */
+.main-logo-area .logo-link span {
+    font-size: 3rem; /* 大きく */
+    margin-bottom: 30px;
+}
+
+/* 3. フッターロゴテキスト */
+.footer .logo-link span {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* もし画像ロゴ(imgタグ)をCSSで青に変える場合は以下（今回はテキストロゴなので不要ですが参考まで） */
+/* .main-logo { filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(190deg); } */
 
 .main-nav {
     display: flex;
