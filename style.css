@@ -80,7 +80,7 @@ body {
     max-width: 300px;
     width: 80%;
     height: auto;
-    /* 青を出すためにフィルタはなし */
+    filter: none; /* 白くする設定を完全に削除しました */
 }
 
 .catchphrase {
@@ -92,7 +92,6 @@ body {
 .video-container { width: 100%; margin-bottom: 100px; }
 video { width: 100%; border: 1px solid #333; }
 
-/* 各セクション */
 .content {
     text-align: left;
     background-color: #141414;
@@ -104,7 +103,6 @@ video { width: 100%; border: 1px solid #333; }
 
 h2 { color: #888; font-size: 0.9rem; letter-spacing: 0.2em; text-transform: uppercase; }
 
-/* SNSアイコン */
 .social-links { display: flex; gap: 30px; margin-top: 20px; }
 .link-icon { color: #fff !important; font-size: 1.8rem; text-decoration: none; transition: 0.3s; opacity: 0.8; }
 .link-icon:hover { opacity: 0.5; transform: translateY(-3px); }
