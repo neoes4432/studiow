@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ヘッダー */
+/* ヘッダー全体 */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -29,7 +29,7 @@ body {
     z-index: 1000;
 }
 
-/* 左上のロゴ：常に白 */
+/* 左上のロゴ：白に固定 */
 .logo-link-white {
     color: #fff !important;
     text-decoration: none;
@@ -38,7 +38,7 @@ body {
     letter-spacing: 0.2em;
 }
 
-/* ナビゲーション */
+/* ナビメニュー */
 .main-nav {
     display: flex;
     list-style: none;
@@ -58,7 +58,7 @@ body {
 
 .main-nav a:hover { opacity: 1; }
 
-/* メインコンテンツ */
+/* コンテナ */
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -66,7 +66,7 @@ body {
     text-align: center;
 }
 
-/* 中央ロゴエリア：ここを青い画像用に修正 */
+/* 中央ロゴエリア：青い画像をそのまま出す */
 .main-logo-area {
     width: 100%;
     height: 60vh;
@@ -80,8 +80,7 @@ body {
     max-width: 300px;
     width: 80%;
     height: auto;
-    /* 白くする設定を削除し、青い色がそのまま出るようにしました */
-    filter: none; 
+    filter: none; /* 白く反転させない */
 }
 
 .catchphrase {
@@ -90,10 +89,10 @@ body {
     letter-spacing: 0.1em;
 }
 
-/* 動画・セクション・SNSアイコンなどの残りの装飾 */
 .video-container { width: 100%; margin-bottom: 100px; }
 video { width: 100%; border: 1px solid #333; }
 
+/* 各セクション */
 .content {
     text-align: left;
     background-color: #141414;
@@ -105,6 +104,7 @@ video { width: 100%; border: 1px solid #333; }
 
 h2 { color: #888; font-size: 0.9rem; letter-spacing: 0.2em; text-transform: uppercase; }
 
+/* SNSリンク */
 .social-links { display: flex; gap: 30px; margin-top: 20px; }
 .link-icon { color: #fff; font-size: 1.8rem; text-decoration: none; transition: 0.3s; opacity: 0.8; }
 .link-icon:hover { opacity: 0.5; transform: translateY(-3px); }
