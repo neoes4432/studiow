@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ヘッダー */
+/* ヘッダー全体 */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -57,7 +57,6 @@ body {
 
 .main-nav a:hover { opacity: 1; }
 
-/* メインエリア */
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -65,7 +64,7 @@ body {
     text-align: center;
 }
 
-/* 中央ロゴエリア */
+/* 中央ロゴエリア：フィルタを削除して青色を表示 */
 .main-logo-area {
     width: 100%;
     height: 60vh;
@@ -79,7 +78,7 @@ body {
     max-width: 300px;
     width: 80%;
     height: auto;
-    filter: none; /* 反転フィルタなし */
+    filter: none;
 }
 
 .catchphrase {
