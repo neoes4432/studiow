@@ -9,7 +9,7 @@ body {
     background-color: #0a0a0a;
     color: #f0f0f0;
     font-family: "Helvetica Neue", Arial, sans-serif;
-    overflow-x: hidden; /* 横ずれ防止 */
+    overflow-x: hidden;
 }
 
 /* ヘッダー */
@@ -29,62 +29,16 @@ body {
     z-index: 1000;
 }
 
-/* --- ロゴ関連のスタイル --- */
-
-/* 共通：ロゴのリンク（左上ロゴ、中央ロゴ、フッターロゴすべてに適用） */
-.logo-link {
-    text-decoration: none;
-    transition: color 0.3s;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* 共通：ロゴのテキストの色を白から青へ、そして太く */
-.logo-text, .logo-link span {
-    color: #0047AB !important; /* 白(#fff)からコバルトブルーに変更 */
-    font-weight: 700 !important; /* 太くして視認性を確保 */
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-}
-
-/* ホバー時の色（少し明るい青） */
-.logo-link:hover .logo-text, .logo-link:hover span {
-    color: #4169E1 !important; /* ロイヤルブルー */
-}
-
-/* 左上のロゴテキスト：白のままにする */
-.page-header .logo-link {
+/* 左上のロゴ：常に白 */
+.logo-link-white {
     color: #fff !important;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
 }
 
-/* 中央の大きなロゴ画像（アートボード 1.png）の設定 */
-.main-logo-area {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 100px 0;
-}
-
-.main-logo {
-    max-width: 400px; /* PCでの見やすさに合わせて調整してください */
-    width: 80%;
-    height: auto;
-    /* 元の画像が濃い青の場合、黒背景で沈まないよう少し明るく調整 */
-    filter: brightness(1.2); 
-}
-}
-
-/* 3. フッターロゴテキスト */
-.footer .logo-link span {
-    font-size: 1rem;
-    opacity: 0.8;
-}
-
-/* もし画像ロゴ(imgタグ)をCSSで青に変える場合は以下（今回はテキストロゴなので不要ですが参考まで） */
-/* .main-logo { filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(190deg); } */
-
+/* ナビゲーション */
 .main-nav {
     display: flex;
     list-style: none;
@@ -112,10 +66,10 @@ body {
     text-align: center;
 }
 
-/* 中央ロゴエリア：ここを書き換えて中央配置を確実に */
+/* 中央ロゴエリア：ここを青い画像用に修正 */
 .main-logo-area {
     width: 100%;
-    height: 60vh; /* 画面の中央付近に配置 */
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,8 +80,8 @@ body {
     max-width: 300px;
     width: 80%;
     height: auto;
-    /* 青いロゴを真っ白に反転させる */
-    filter: brightness(0) invert(1);
+    /* 白くする設定を削除し、青い色がそのまま出るようにしました */
+    filter: none; 
 }
 
 .catchphrase {
@@ -136,18 +90,10 @@ body {
     letter-spacing: 0.1em;
 }
 
-/* 動画 */
-.video-container {
-    width: 100%;
-    margin-bottom: 100px;
-}
+/* 動画・セクション・SNSアイコンなどの残りの装飾 */
+.video-container { width: 100%; margin-bottom: 100px; }
+video { width: 100%; border: 1px solid #333; }
 
-video {
-    width: 100%;
-    border: 1px solid #333;
-}
-
-/* セクション */
 .content {
     text-align: left;
     background-color: #141414;
@@ -157,36 +103,10 @@ video {
     margin-bottom: 80px;
 }
 
-h2 {
-    color: #888;
-    font-size: 0.9rem;
-    letter-spacing: 0.2em;
-    margin-top: 0;
-    text-transform: uppercase;
-}
+h2 { color: #888; font-size: 0.9rem; letter-spacing: 0.2em; text-transform: uppercase; }
 
-/* SNSアイコン */
-.social-links {
-    display: flex;
-    gap: 30px;
-    margin-top: 20px;
-}
+.social-links { display: flex; gap: 30px; margin-top: 20px; }
+.link-icon { color: #fff; font-size: 1.8rem; text-decoration: none; transition: 0.3s; opacity: 0.8; }
+.link-icon:hover { opacity: 0.5; transform: translateY(-3px); }
 
-.link-icon {
-    color: #fff;
-    font-size: 1.8rem;
-    text-decoration: none;
-    transition: 0.3s;
-    opacity: 0.8;
-}
-
-.link-icon:hover {
-    opacity: 0.5;
-    transform: translateY(-3px);
-}
-
-.footer {
-    padding: 50px 0;
-    opacity: 0.4;
-    font-size: 0.8rem;
-}
+.footer { padding: 50px 0; opacity: 0.4; font-size: 0.8rem; }
