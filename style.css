@@ -12,7 +12,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ヘッダー */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -33,7 +32,7 @@ body {
     color: #fff !important;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.3rem; /* 少し大きく */
+    font-size: 1.4rem;
     letter-spacing: 0.2em;
 }
 
@@ -46,62 +45,62 @@ body {
 .main-nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    opacity: 0.7;
+    font-size: 0.9rem;
 }
 
-/* メインエリア */
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
 }
 
-/* 中央ロゴエリア */
+/* ロゴエリアの視認性向上 */
 .main-logo-area {
     width: 100%;
-    height: 70vh; /* 高さを少し広げました */
+    min-height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
 }
 
-/* ロゴの背景に薄い白を敷く */
-.logo-backdrop {
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
-    padding: 60px;
-    border-radius: 50%;
-    display: inline-block;
+.logo-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* ロゴの背後に「光の溜まり」をより強く配置 */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 75%);
+    padding: 120px;
 }
 
 .main-logo {
-    max-width: 450px; /* サイズを1.5倍ほど大きく */
-    width: 90%;
+    max-width: 650px; /* さらに少し拡大 */
+    width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1)); /* ぼんやり光らせて視認性アップ */
+    /* ロゴ自体の境界線を光らせて浮かび上がらせる */
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
 }
 
 .catchphrase {
-    font-size: 1.5rem;
-    margin-bottom: 100px;
-    letter-spacing: 0.1em;
+    font-size: 1.6rem;
+    margin-bottom: 120px;
+    letter-spacing: 0.15em;
 }
 
-.video-container { width: 100%; margin-bottom: 100px; }
-video { width: 100%; border: 1px solid #333; }
+.video-container { width: 100%; margin-bottom: 120px; }
+video { width: 100%; border: 1px solid #222; border-radius: 4px; }
 
 .content {
     text-align: left;
-    background-color: #141414;
+    background-color: #111;
     border: 1px solid #222;
-    border-radius: 12px;
-    padding: 50px;
-    margin-bottom: 80px;
+    border-radius: 16px;
+    padding: 60px;
+    margin-bottom: 100px;
 }
 
-h2 { color: #888; font-size: 0.9rem; letter-spacing: 0.2em; text-transform: uppercase; }
+h2 { color: #666; font-size: 1rem; letter-spacing: 0.3em; margin-bottom: 30px; }
+p { line-height: 1.8; color: #ccc; }
 
-.footer { padding: 50px 0; opacity: 0.4; font-size: 0.8rem; }
+.footer { padding: 60px 0; opacity: 0.3; font-size: 0.8rem; }
