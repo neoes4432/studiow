@@ -9,8 +9,10 @@ body {
     background-color: #0a0a0a;
     color: #f0f0f0;
     font-family: "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
 }
 
+/* ヘッダー */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -31,7 +33,7 @@ body {
     color: #fff !important;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* 少し大きく */
     letter-spacing: 0.2em;
 }
 
@@ -46,8 +48,10 @@ body {
     text-decoration: none;
     font-size: 0.8rem;
     text-transform: uppercase;
+    opacity: 0.7;
 }
 
+/* メインエリア */
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -55,29 +59,49 @@ body {
     text-align: center;
 }
 
+/* 中央ロゴエリア */
 .main-logo-area {
     width: 100%;
-    height: 60vh;
+    height: 70vh; /* 高さを少し広げました */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 40px;
+}
+
+/* ロゴの背景に薄い白を敷く */
+.logo-backdrop {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+    padding: 60px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .main-logo {
-    max-width: 300px;
-    width: 80%;
+    max-width: 450px; /* サイズを1.5倍ほど大きく */
+    width: 90%;
     height: auto;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1)); /* ぼんやり光らせて視認性アップ */
 }
 
-.video-container { width: 100%; margin: 50px 0; }
-video { width: 100%; }
+.catchphrase {
+    font-size: 1.5rem;
+    margin-bottom: 100px;
+    letter-spacing: 0.1em;
+}
+
+.video-container { width: 100%; margin-bottom: 100px; }
+video { width: 100%; border: 1px solid #333; }
 
 .content {
     text-align: left;
     background-color: #141414;
-    padding: 40px;
-    margin-bottom: 50px;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 50px;
+    margin-bottom: 80px;
 }
 
-.footer { padding: 50px 0; opacity: 0.4; }
+h2 { color: #888; font-size: 0.9rem; letter-spacing: 0.2em; text-transform: uppercase; }
+
+.footer { padding: 50px 0; opacity: 0.4; font-size: 0.8rem; }
