@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ヘッダー全体 */
+/* ヘッダー */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -29,7 +29,7 @@ body {
     z-index: 1000;
 }
 
-/* 左上のロゴ：白 */
+/* 左上のロゴテキスト：白 */
 .logo-link-white {
     color: #fff !important;
     text-decoration: none;
@@ -38,7 +38,6 @@ body {
     letter-spacing: 0.2em;
 }
 
-/* ナビゲーション */
 .main-nav {
     display: flex;
     list-style: none;
@@ -80,7 +79,7 @@ body {
     max-width: 300px;
     width: 80%;
     height: auto;
-    filter: none; /* 白く反転させない（青のまま） */
+    /* 白くする設定を完全に削除 */
 }
 
 .catchphrase {
