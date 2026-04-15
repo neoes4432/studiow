@@ -149,3 +149,20 @@ h2 {
     opacity: 0.5;
     transform: translateY(-3px);
 }
+/* 中央のロゴエリアを画面幅いっぱいに広げて中身をど真ん中に配置 */
+.main-logo-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px; /* ヘッダーの下に隠れないように余白を確保 */
+    box-sizing: border-box;
+}
+
+/* ロゴ画像自体の調整 */
+.main-logo {
+    max-width: 60%; /* 大きすぎる場合はこの数値を下げてください */
+    height: auto;
+    /* 暗いロゴをブラウザ上で強制的に真っ白にするコード */
+    filter: brightness(0) invert(1);
+}
