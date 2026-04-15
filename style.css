@@ -55,36 +55,36 @@ body {
     text-align: center;
 }
 
-/* ロゴエリアの視認性向上 */
+/* 中央ロゴエリアの視認性を最大化 */
 .main-logo-area {
     width: 100%;
-    min-height: 85vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.logo-wrapper {
+.logo-highlight-box {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* ロゴの背後に「光の溜まり」をより強く配置 */
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 75%);
-    padding: 120px;
+    /* 背景の白をより濃く、広く */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 80%);
+    padding: 150px;
 }
 
 .main-logo {
-    max-width: 650px; /* さらに少し拡大 */
+    max-width: 700px;
     width: 100%;
     height: auto;
-    /* ロゴ自体の境界線を光らせて浮かび上がらせる */
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
+    /* ロゴの輪郭を際立たせる */
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.2));
 }
 
 .catchphrase {
     font-size: 1.6rem;
-    margin-bottom: 120px;
+    margin: 80px 0 120px;
     letter-spacing: 0.15em;
 }
 
@@ -101,6 +101,12 @@ video { width: 100%; border: 1px solid #222; border-radius: 4px; }
 }
 
 h2 { color: #666; font-size: 1rem; letter-spacing: 0.3em; margin-bottom: 30px; }
-p { line-height: 1.8; color: #ccc; }
+
+.link-icon {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    opacity: 0.8;
+}
 
 .footer { padding: 60px 0; opacity: 0.3; font-size: 0.8rem; }
