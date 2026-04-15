@@ -53,17 +53,27 @@ body {
     color: #4169E1 !important; /* ロイヤルブルー */
 }
 
-/* --- 各配置独自の調整 --- */
-
-/* 1. ヘッダー（左上）ロゴテキスト */
-.page-header h1 .logo-link span {
-    font-size: 1.1rem;
+/* 左上のロゴテキスト：白のままにする */
+.page-header .logo-link {
+    color: #fff !important;
+    text-decoration: none;
 }
 
-/* 2. 中央の大きなロゴテキスト */
-.main-logo-area .logo-link span {
-    font-size: 3rem; /* 大きく */
-    margin-bottom: 30px;
+/* 中央の大きなロゴ画像（アートボード 1.png）の設定 */
+.main-logo-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.main-logo {
+    max-width: 400px; /* PCでの見やすさに合わせて調整してください */
+    width: 80%;
+    height: auto;
+    /* 元の画像が濃い青の場合、黒背景で沈まないよう少し明るく調整 */
+    filter: brightness(1.2); 
+}
 }
 
 /* 3. フッターロゴテキスト */
