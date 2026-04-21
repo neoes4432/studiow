@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ヘッダー周りの視認性確保 */
+/* ヘッダー：デザインを損なわず文字を際立たせる */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -24,8 +24,8 @@ body {
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    background-color: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(10px);
+    background-color: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(15px);
     z-index: 1000;
 }
 
@@ -34,36 +34,38 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.4rem;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.25em;
 }
 
 .main-nav {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 40px;
 }
 
 .main-nav a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.9rem;
-    opacity: 0.8;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    opacity: 0.9;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
 }
 
-/* メインロゴエリアの修正 */
+/* メインロゴエリア：間違いなく見えるように修正 */
 .main-logo-area {
     width: 100%;
     min-height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 80px;
 }
 
 .logo-highlight-box {
@@ -74,106 +76,108 @@ body {
     align-items: center;
 }
 
-/* * 修正ポイント：
- * invert(1) で色を反転させ、brightness(2) で輝度を最大化しました。
- * これにより、元の画像が何色であっても「真っ白に近い状態」でくっきり表示されます。
+/* * 【重要修正】
+ * brightness(0) invert(1) を組み合わせることで、
+ * 元がどんなに暗い紺色であっても、一度真っ黒にしてから反転させ、
+ * 「強制的に純白」として表示させます。これで絶対に見えるようになります。
  */
 .main-logo {
-    max-width: 700px;
-    width: 90%;
+    max-width: 650px;
+    width: 85%;
     height: auto;
-    filter: invert(1) brightness(2) contrast(1.2);
+    filter: brightness(0) invert(1); 
     display: block;
 }
 
-/* キャッチフレーズのバランス調整 */
+/* キャッチフレーズ：静謐な高級感 */
 .catchphrase-group {
-    margin: 100px 0 150px;
+    margin: 120px 0 180px;
 }
 
 .catchphrase {
     margin: 0;
-    font-size: 1.6rem;
-    letter-spacing: 0.2em;
+    font-size: 1.7rem;
+    letter-spacing: 0.25em;
     color: #ffffff;
-    line-height: 1.5;
+    line-height: 1.8;
 }
 
 .en-sub {
-    margin: 20px 0 0 0;
+    margin: 25px 0 0 0;
     font-size: 0.9rem;
-    letter-spacing: 0.15em;
-    color: #888888;
+    letter-spacing: 0.2em;
+    color: #666666;
     font-style: italic;
 }
 
-/* 動画エリア */
+/* 動画：エッジを立てる */
 .video-container {
     width: 100%;
-    margin-bottom: 150px;
+    margin-bottom: 180px;
 }
 
 video {
     width: 100%;
-    border: 1px solid #222222;
-    border-radius: 2px;
+    border: 1px solid #333333;
+    border-radius: 0;
 }
 
-/* コンテンツセクション */
+/* コンテンツ：バランスと余白の改善 */
 .content {
     text-align: left;
     background-color: #0d0d0d;
     border: 1px solid #1a1a1a;
-    border-radius: 0; /* よりシャープな印象に */
-    padding: 80px 60px;
-    margin-bottom: 120px;
+    padding: 100px 80px;
+    margin-bottom: 150px;
 }
 
 h2 {
-    color: #444444;
-    font-size: 0.9rem;
-    letter-spacing: 0.4em;
-    margin-bottom: 50px;
+    color: #555555;
+    font-size: 0.85rem;
+    letter-spacing: 0.5em;
+    margin-bottom: 60px;
     text-transform: uppercase;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 15px;
+    display: inline-block;
 }
 
-/* テキストの読みやすさ調整 */
 .jp-text {
-    margin: 0 0 15px 0;
-    font-size: 1.05rem;
+    margin: 0 0 20px 0;
+    font-size: 1.1rem;
     color: #e0e0e0;
-    line-height: 1.9;
+    line-height: 2.0;
 }
 
 .en-text {
     margin: 0;
     font-size: 0.85rem;
-    color: #555555;
-    line-height: 1.7;
+    color: #444444;
+    line-height: 1.8;
     font-style: italic;
 }
 
 .works-item h3 {
-    margin: 0 0 25px 0;
-    font-size: 1.3rem;
+    margin: 0 0 30px 0;
+    font-size: 1.4rem;
     color: #ffffff;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
 }
 
-/* メールアイコン */
+/* Contact：アイコンの視認性 */
 .social-links {
     padding: 20px 0;
 }
 
 .link-icon i {
     color: #ffffff !important;
-    font-size: 2.2rem;
-    opacity: 0.9;
+    font-size: 2.5rem;
+    opacity: 1;
 }
 
 .footer {
-    padding: 80px 0;
-    color: #333333;
+    padding: 100px 0;
+    color: #222222;
     font-size: 0.75rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
 }
