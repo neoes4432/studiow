@@ -79,3 +79,48 @@
 
 </body>
 </html>
+
+/* 英語併記のための追加スタイル */
+
+/* キャッチフレーズ部分 */
+.catchphrase-group {
+    margin: 80px 0 120px;
+}
+
+.catchphrase {
+    margin: 0; /* 余白はグループ側で管理 */
+    font-size: 1.6rem;
+    letter-spacing: 0.15em;
+}
+
+.en-sub {
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* 本文テキストグループ */
+.text-group {
+    line-height: 1.8;
+}
+
+.jp-text {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.en-text {
+    font-size: 0.85rem;
+    opacity: 0.5;
+    line-height: 1.6;
+    font-style: italic;
+    /* 英語は少し文字間を広げると洗練されます */
+    letter-spacing: 0.05em; 
+}
+
+/* Works内のタイトルの下の英語 */
+.works-item h3 + .jp-text + .en-text {
+    margin-top: -10px;
+}
