@@ -24,13 +24,13 @@ body {
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    background-color: rgba(10, 10, 10, 0.9);
+    background-color: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
 
 .logo-link-white {
-    color: #fff !important;
+    color: #ffffff !important;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.4rem;
@@ -44,7 +44,7 @@ body {
 }
 
 .main-nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-size: 0.9rem;
 }
@@ -56,7 +56,7 @@ body {
     text-align: center;
 }
 
-/* メインロゴエリア：背後の光を強化 */
+/* ロゴの視認性修正 */
 .main-logo-area {
     width: 100%;
     min-height: 90vh;
@@ -70,9 +70,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* 背後の白い光をより濃く、範囲を広げました */
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 75%);
-    padding: 120px;
+    /* ロゴの背後にスポットライトを当てて視認性を確保 */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+    padding: 150px;
     border-radius: 50%;
 }
 
@@ -80,8 +80,8 @@ body {
     max-width: 700px;
     width: 100%;
     height: auto;
-    /* 明るさをさらに上げ、ロゴ自体のディテールが見えるようにグロー効果を追加 */
-    filter: brightness(4.0) drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    /* ロゴ自体の明るさを最大化し、グロー効果を付与 */
+    filter: brightness(500%) drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
 }
 
 /* キャッチフレーズ */
@@ -93,18 +93,18 @@ body {
     margin: 0;
     font-size: 1.6rem;
     letter-spacing: 0.15em;
-    color: #fff;
+    color: #ffffff;
 }
 
 .en-sub {
     margin: 15px 0 0 0;
     font-size: 0.9rem;
     letter-spacing: 0.12em;
-    color: #999;
+    color: #aaaaaa;
     font-style: italic;
 }
 
-/* 動画エリア */
+/* 動画 */
 .video-container {
     width: 100%;
     margin-bottom: 120px;
@@ -112,22 +112,22 @@ body {
 
 video {
     width: 100%;
-    border: 1px solid #222;
+    border: 1px solid #333;
     border-radius: 4px;
 }
 
 /* コンテンツエリア */
 .content {
     text-align: left;
-    background-color: #111;
-    border: 1px solid #222;
+    background-color: #111111;
+    border: 1px solid #222222;
     border-radius: 16px;
     padding: 60px;
     margin-bottom: 100px;
 }
 
 h2 {
-    color: #888;
+    color: #888888;
     font-size: 0.9rem;
     letter-spacing: 0.3em;
     margin-bottom: 30px;
@@ -141,31 +141,33 @@ h2 {
 .jp-text {
     margin-bottom: 12px;
     font-size: 1rem;
-    color: #eee;
+    color: #eeeeee;
 }
 
 .en-text {
     margin: 0;
     font-size: 0.8rem;
-    color: #888;
+    color: #888888;
     line-height: 1.6;
     font-style: italic;
 }
 
-/* コンタクト：メールアイコンを確実に白く大きく */
-.link-icon {
-    color: #ffffff !important; /* 強制的に白 */
-    font-size: 3.5rem; /* さらに大きく */
-    text-decoration: none;
-    opacity: 1 !important;
-    display: inline-block;
-    /* アイコンが浮き立つように影を追加 */
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+/* メールマークの視認性修正 */
+.social-links {
+    padding: 20px 0;
 }
 
-.link-icon:hover {
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
-    transform: scale(1.05);
+.link-icon i {
+    color: #ffffff !important; /* 青色を上書きして純白に */
+    font-size: 4rem; /* サイズを大きく */
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)); /* 白い光を纏わせる */
+    transition: transform 0.3s ease;
+}
+
+.link-icon i:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.9));
 }
 
 .footer {
