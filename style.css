@@ -1,4 +1,3 @@
-/* すべてを上書きしてください */
 html {
     scroll-padding-top: 100px;
     scroll-behavior: smooth;
@@ -7,9 +6,10 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #000000 !important; /* 背景を完全な黒に固定 */
-    color: #ffffff;
+    background-color: #0a0a0a;
+    color: #f0f0f0;
     font-family: "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 .page-header {
@@ -20,16 +20,19 @@ body {
     height: 80px;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(10px);
     z-index: 1000;
 }
 
 .logo-link-white {
-    color: #ffffff !important;
+    color: #fff !important;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.4rem;
     letter-spacing: 0.2em;
 }
 
@@ -40,8 +43,16 @@ body {
 }
 
 .main-nav a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
 .main-logo-area {
@@ -50,48 +61,110 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
 }
 
-/* * 【ここが最重要修正】
- * どんな画像でも強制的に白くし、さらに外側に白い光（ドロップシャドウ）をつけました。
- * これで黒背景でも絶対に見えるようになります。
+/* * 修正ポイント：
+ * ロゴの背後に「柔らかな白い光（グラデーション）」を配置しました。
+ * これにより、ロゴの「紺色」を維持したまま、黒背景からくっきりと浮かび上がらせます。
+ */
+.logo-highlight-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+    padding: 100px;
+}
+
+/* * 修正ポイント：
+ * filterを削除し、ロゴの元の色を100%表示します。
  */
 .main-logo {
-    max-width: 600px;
-    width: 80%;
+    max-width: 700px;
+    width: 100%;
     height: auto;
-    filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)) !important;
-    display: block !important;
+    filter: none !important;
+    display: block;
 }
 
 .catchphrase-group {
-    margin: 100px 0;
+    margin: 80px 0 120px;
     text-align: center;
 }
 
 .catchphrase {
+    margin: 0;
     font-size: 1.6rem;
-    letter-spacing: 0.2em;
-    color: #ffffff;
+    letter-spacing: 0.15em;
+    color: #fff;
+}
+
+.en-sub {
+    margin: 15px 0 0 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.video-container {
+    width: 100%;
+    margin-bottom: 120px;
+}
+
+video {
+    width: 100%;
+    border: 1px solid #222;
+    border-radius: 4px;
 }
 
 .content {
-    max-width: 900px;
-    margin: 0 auto 100px;
-    padding: 60px;
-    background-color: #0a0a0a;
-    border: 1px solid #222;
     text-align: left;
+    background-color: #111;
+    border: 1px solid #222;
+    border-radius: 16px;
+    padding: 60px;
+    margin-bottom: 100px;
+}
+
+h2 {
+    color: #666;
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 40px;
 }
 
 .jp-text {
-    line-height: 2;
-    color: #e0e0e0;
+    margin: 0 0 12px 0;
+    font-size: 1rem;
+    color: #f0f0f0;
+    line-height: 1.8;
+}
+
+.en-text {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.4;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.works-item h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+
+.link-icon {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    opacity: 0.8;
 }
 
 .footer {
-    padding: 50px 0;
-    text-align: center;
-    color: #444;
+    padding: 60px 0;
+    opacity: 0.3;
+    font-size: 0.8rem;
 }
