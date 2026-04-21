@@ -1,3 +1,4 @@
+/* ベースとなる元のデザインを復元 */
 html {
     scroll-padding-top: 100px;
     scroll-behavior: smooth;
@@ -6,8 +7,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #0a0a0a; /* 完全な黒系背景に戻す */
-    color: #f0f0f0;
+    background-color: #0a0a0a; /* 真っ黒な背景 */
+    color: #f0f0f0; /* 文字は白 */
     font-family: "Helvetica Neue", Arial, sans-serif;
     overflow-x: hidden;
 }
@@ -23,7 +24,7 @@ body {
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    background-color: rgba(10, 10, 10, 0.9);
+    background-color: rgba(10, 10, 10, 0.9); /* ヘッダーも黒 */
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
@@ -64,8 +65,8 @@ body {
 }
 
 /* * 修正ポイント：
- * ロゴを囲んでいた「ぼんやりとした光（radial-gradient）」を削除。
- * image_10.pngのような「黒背景にロゴ」の静謐な状態に戻しました。
+ * ロゴの背後をぼんやり明るくしていた円形のグラデーション（rgba(255, 255, 255, 0.25)）を削除。
+ * image_16.pngのような「黒背景にロゴのみ」の状態に戻しました。
  */
 .logo-highlight-box {
     position: relative;
@@ -77,17 +78,18 @@ body {
 }
 
 /* * 修正ポイント：
- * drop-shadow を適用し、ロゴの色調は維持したまま、
- * 白い光の輪郭を纏わせ、背景から劇的に浮かび上がらせます。
+ * filter: brightness(2.0) contrast(1.1) を適用し、
+ * ロゴの色調は維持したまま、明度とコントラストを劇的に引き上げ、
+ * 真っ黒な背景でもくっきりと見えるようにしました。
  */
 .main-logo {
     max-width: 700px;
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5)); /* ロゴ自体の存在感を出す白い光の輪郭 */
+    filter: brightness(2.0) contrast(1.1); /* 暗い背景でもロゴが見えるよう明るくする */
 }
 
-/* キャッチフレーズのスタイル：余白を調整し image_11.pngのバランスを参考に */
+/* キャッチフレーズのスタイル */
 .catchphrase-group {
     margin: 80px 0 120px;
     text-align: center;
@@ -97,15 +99,16 @@ body {
     margin: 0;
     font-size: 1.6rem;
     letter-spacing: 0.15em;
-    color: #fff; /* 日本語は白 */
+    color: #fff; /* 日本語はパキッとした白 */
 }
 
+/* 英語の追加スタイル（洗練さを維持） */
 .en-sub {
     margin: 15px 0 0 0;
     font-size: 0.9rem;
     letter-spacing: 0.1em;
-    opacity: 0.5; /* 英語は透明度を下げて控えめに */
-    font-style: italic;
+    opacity: 0.5; /* 透明度を下げて存在感を抑える */
+    font-style: italic; /* イタリック体でニュアンスを変える */
 }
 
 .video-container {
@@ -121,7 +124,7 @@ video {
 
 .content {
     text-align: left;
-    background-color: #111;
+    background-color: #111; /* コンテンツエリアも黒系 */
     border: 1px solid #222;
     border-radius: 16px;
     padding: 60px;
@@ -135,7 +138,7 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* 日本語と英語のテキストグループ：image_12.pngのバランスを参考に */
+/* 日本語と英語のテキストグループ */
 .text-group {
     line-height: 1.8;
 }
