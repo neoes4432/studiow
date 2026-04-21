@@ -1,3 +1,4 @@
+/* ベースとなる元のデザインを復元 */
 html {
     scroll-padding-top: 100px;
     scroll-behavior: smooth;
@@ -6,8 +7,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #0a0a0a;
-    color: #f0f0f0;
+    background-color: #0a0a0a; /* 完全な黒系背景に戻す */
+    color: #f0f0f0; /* 文字は白 */
     font-family: "Helvetica Neue", Arial, sans-serif;
     overflow-x: hidden;
 }
@@ -23,7 +24,7 @@ body {
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    background-color: rgba(10, 10, 10, 0.9);
+    background-color: rgba(10, 10, 10, 0.9); /* ヘッダーも黒 */
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
@@ -63,20 +64,24 @@ body {
     align-items: center;
 }
 
+/* * デザイン修正ポイント
+ * 不要な白背景（radial-gradient）を削除し、
+ * 元の「黒背景にロゴのみ」の状態に戻しました。
+ */
 .logo-highlight-box {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 80%);
-    padding: 150px;
+    background: none; /* 背景グラデーションを削除 */
+    padding: 0; /* 余分なパディングを削除 */
 }
 
 .main-logo {
     max-width: 700px;
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.2));
+    filter: none; /* 不要なドロップシャドウを削除 */
 }
 
 /* キャッチフレーズのスタイル */
@@ -89,15 +94,19 @@ body {
     margin: 0;
     font-size: 1.6rem;
     letter-spacing: 0.15em;
+    color: #fff; /* 日本語はパキッとした白 */
 }
 
+/* * 英語の追加スタイル（洗練さを維持）
+ * 日本語より小さく、少し透明度を下げることで、
+ * デザインの邪魔をせず上品に配置します。
+ */
 .en-sub {
     margin: 15px 0 0 0;
     font-size: 0.9rem;
     letter-spacing: 0.1em;
-    opacity: 0.5;
-    font-style: italic;
-    font-family: "Georgia", "Times New Roman", serif;
+    opacity: 0.5; /* 透明度を下げて存在感を抑える */
+    font-style: italic; /* イタリック体でニュアンスを変える */
 }
 
 .video-container {
@@ -113,7 +122,7 @@ video {
 
 .content {
     text-align: left;
-    background-color: #111;
+    background-color: #111; /* コンテンツエリアも黒系 */
     border: 1px solid #222;
     border-radius: 16px;
     padding: 60px;
@@ -121,7 +130,7 @@ video {
 }
 
 h2 {
-    color: #666;
+    color: #666; /* 見出しはグレーで控えめに */
     font-size: 1rem;
     letter-spacing: 0.3em;
     margin-bottom: 40px;
@@ -141,11 +150,10 @@ h2 {
 .en-text {
     margin: 0;
     font-size: 0.85rem;
-    opacity: 0.5;
+    opacity: 0.4; /* 本文の英語はさらに透明度を下げ、背景に溶け込ませる */
     line-height: 1.6;
     font-style: italic;
     letter-spacing: 0.05em;
-    font-family: "Georgia", "Times New Roman", serif;
 }
 
 .works-item h3 {
