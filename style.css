@@ -55,7 +55,7 @@ body {
     text-align: center;
 }
 
-/* メインロゴエリア：背後を明るく調整 */
+/* メインロゴエリア：背後をさらに明るく調整 */
 .main-logo-area {
     width: 100%;
     min-height: 90vh;
@@ -69,18 +69,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* ロゴの背後だけに薄い光を当てる（スポットライト効果） */
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+    /* ロゴの背後の光を少し強める（スポットライト効果） */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
     padding: 100px;
     border-radius: 50%;
 }
 
+/* * 修正ポイント：
+ * filter: brightness(3.0); を適用し、
+ * ロゴの色調は維持したまま、劇的に明るく浮かび上がらせます。
+ */
 .main-logo {
     max-width: 700px;
     width: 100%;
     height: auto;
-    /* ロゴ自体の露出を少し上げる */
-    filter: brightness(1.2);
+    /* ロゴ自体の露出を劇的に上げる */
+    filter: brightness(3.0);
 }
 
 /* キャッチフレーズ */
@@ -98,9 +102,9 @@ body {
 
 .en-sub {
     margin: 15px 0 0 0;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     letter-spacing: 0.12em;
-    color: #666;
+    color: #888; /* 落ち着いたグレー */
     font-style: italic;
 }
 
@@ -116,7 +120,7 @@ video {
     border-radius: 4px;
 }
 
-/* コンテンツ */
+/* コンテンツセクション */
 .content {
     text-align: left;
     background-color: #111;
@@ -127,13 +131,14 @@ video {
 }
 
 h2 {
-    color: #444;
-    font-size: 0.9rem;
+    color: #777; /* 見出しはグレーで控えめに */
+    font-size: 1rem;
     letter-spacing: 0.3em;
     margin-bottom: 30px;
     text-transform: uppercase;
 }
 
+/* 日本語と英語のテキストグループ */
 .text-group {
     line-height: 1.8;
 }
@@ -141,15 +146,16 @@ h2 {
 .jp-text {
     margin-bottom: 12px;
     font-size: 1rem;
-    color: #eee;
+    color: #f0f0f0;
 }
 
 .en-text {
     margin: 0;
-    font-size: 0.8rem;
-    color: #444;
+    font-size: 0.85rem;
+    color: #777; /* 英語は背景に馴染ませる */
     line-height: 1.6;
     font-style: italic;
+    letter-spacing: 0.05em;
 }
 
 .works-item h3 {
@@ -159,8 +165,19 @@ h2 {
     color: #fff;
 }
 
+/* * 修正ポイント：
+ * コンタクトのメールアイコンを「青」から「白」に変更し、
+ * 不透明度を1.0にして完璧に見えるようにします。
+ */
+.link-icon {
+    color: #fff; /* 青から白に変更 */
+    font-size: 2.5rem; /* サイズも少し大きく調整 */
+    text-decoration: none;
+    opacity: 1.0; /* 完全に鮮明にする */
+}
+
 .footer {
     padding: 60px 0;
-    opacity: 0.2;
-    font-size: 0.75rem;
+    opacity: 0.3;
+    font-size: 0.8rem;
 }
