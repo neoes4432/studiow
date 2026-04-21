@@ -6,7 +6,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #0a0a0a;
+    background-color: #0a0a0a; /* 真っ黒に近い背景 */
     color: #f0f0f0;
     font-family: "Helvetica Neue", Arial, sans-serif;
     overflow-x: hidden;
@@ -56,7 +56,7 @@ body {
     text-align: center;
 }
 
-/* メインロゴ：ノイズを除去し、静かに浮かび上がらせる */
+/* メインロゴエリア：背後をぼんやり明るく調整 */
 .main-logo-area {
     width: 100%;
     min-height: 90vh;
@@ -65,24 +65,36 @@ body {
     align-items: center;
 }
 
+.logo-highlight-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* ロゴの背後だけに薄い光を当てる（スポットライト効果） */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+    padding: 100px;
+    border-radius: 50%;
+}
+
 .main-logo {
     max-width: 700px;
     width: 100%;
     height: auto;
-    /* 発光や影をすべて削除。明るさのみを上品に調整 */
-    filter: brightness(2.2); 
+    /* ロゴ自体の露出を少し上げる。色は変えない */
+    filter: brightness(1.2); 
 }
 
 /* キャッチフレーズ */
 .catchphrase-group {
     margin: 80px 0 120px;
+    text-align: center;
 }
 
 .catchphrase {
     margin: 0;
     font-size: 1.6rem;
     letter-spacing: 0.15em;
-    color: #ffffff;
+    color: #fff;
 }
 
 .en-sub {
@@ -93,7 +105,7 @@ body {
     font-style: italic;
 }
 
-/* 動画 */
+/* 動画エリア */
 .video-container {
     width: 100%;
     margin-bottom: 120px;
@@ -148,12 +160,12 @@ h2 {
     color: #fff;
 }
 
-/* コンタクト：純白で静かに配置 */
+/* コンタクト：メールアイコンを白くし、サイズを小さく */
 .link-icon i {
-    color: #ffffff !important;
-    font-size: 3rem;
+    color: #ffffff !important; /* 青から白に変更 */
+    font-size: 2rem; /* サイズを小さく調整 */
     opacity: 1;
-    filter: none; /* ぼやけた光（drop-shadow）を削除 */
+    filter: none; /* drop-shadowを削除して光りすぎないように */
     transition: transform 0.3s ease;
 }
 
