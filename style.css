@@ -12,6 +12,7 @@ body {
     overflow-x: hidden;
 }
 
+/* ヘッダー */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -63,29 +64,27 @@ body {
     align-items: center;
 }
 
-/* 修正ポイント：
- * ロゴの背後に、元のデザインを邪魔しない「ごく薄い白のグラデーション」を敷きました。
- * これにより、紺色のロゴが黒背景に沈むのを防ぎ、輪郭をはっきりさせます。
+/* 修正箇所：
+ * ロゴの色を維持するためfilterを削除。
+ * 背景に薄い円形のグラデーションを敷き、紺色のロゴの視認性を確保。
  */
 .logo-highlight-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
-    padding: 100px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    padding: 80px;
 }
 
-/* 修正ポイント：
- * ロゴの色を変えるfilter（brightnessやinvert）をすべて削除しました。
- * これで元の紺色がそのまま表示されます。
- */
 .main-logo {
     max-width: 700px;
     width: 100%;
     height: auto;
+    filter: none !important;
     display: block;
 }
 
+/* セクションデザインの復元 */
 .catchphrase-group {
     margin: 80px 0 120px;
     text-align: center;
