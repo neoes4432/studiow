@@ -12,6 +12,7 @@ body {
     overflow-x: hidden;
 }
 
+/* ヘッダー */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -55,7 +56,7 @@ body {
     text-align: center;
 }
 
-/* メインロゴエリア：背後をさらに明るく調整 */
+/* メインロゴエリア：背後の光を強化 */
 .main-logo-area {
     width: 100%;
     min-height: 90vh;
@@ -69,28 +70,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* ロゴの背後の光を少し強める（スポットライト効果） */
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
-    padding: 100px;
+    /* 背後の白い光をより濃く、範囲を広げました */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 75%);
+    padding: 120px;
     border-radius: 50%;
 }
 
-/* * 修正ポイント：
- * filter: brightness(3.0); を適用し、
- * ロゴの色調は維持したまま、劇的に明るく浮かび上がらせます。
- */
 .main-logo {
     max-width: 700px;
     width: 100%;
     height: auto;
-    /* ロゴ自体の露出を劇的に上げる */
-    filter: brightness(3.0);
+    /* 明るさをさらに上げ、ロゴ自体のディテールが見えるようにグロー効果を追加 */
+    filter: brightness(4.0) drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
 }
 
 /* キャッチフレーズ */
 .catchphrase-group {
     margin: 80px 0 120px;
-    text-align: center;
 }
 
 .catchphrase {
@@ -104,11 +100,11 @@ body {
     margin: 15px 0 0 0;
     font-size: 0.9rem;
     letter-spacing: 0.12em;
-    color: #888; /* 落ち着いたグレー */
+    color: #999;
     font-style: italic;
 }
 
-/* 動画 */
+/* 動画エリア */
 .video-container {
     width: 100%;
     margin-bottom: 120px;
@@ -120,7 +116,7 @@ video {
     border-radius: 4px;
 }
 
-/* コンテンツセクション */
+/* コンテンツエリア */
 .content {
     text-align: left;
     background-color: #111;
@@ -131,14 +127,13 @@ video {
 }
 
 h2 {
-    color: #777; /* 見出しはグレーで控えめに */
-    font-size: 1rem;
+    color: #888;
+    font-size: 0.9rem;
     letter-spacing: 0.3em;
     margin-bottom: 30px;
     text-transform: uppercase;
 }
 
-/* 日本語と英語のテキストグループ */
 .text-group {
     line-height: 1.8;
 }
@@ -146,34 +141,31 @@ h2 {
 .jp-text {
     margin-bottom: 12px;
     font-size: 1rem;
-    color: #f0f0f0;
+    color: #eee;
 }
 
 .en-text {
     margin: 0;
-    font-size: 0.85rem;
-    color: #777; /* 英語は背景に馴染ませる */
+    font-size: 0.8rem;
+    color: #888;
     line-height: 1.6;
     font-style: italic;
-    letter-spacing: 0.05em;
 }
 
-.works-item h3 {
-    margin: 0 0 15px 0;
-    font-size: 1.1rem;
-    letter-spacing: 0.1em;
-    color: #fff;
-}
-
-/* * 修正ポイント：
- * コンタクトのメールアイコンを「青」から「白」に変更し、
- * 不透明度を1.0にして完璧に見えるようにします。
- */
+/* コンタクト：メールアイコンを確実に白く大きく */
 .link-icon {
-    color: #fff; /* 青から白に変更 */
-    font-size: 2.5rem; /* サイズも少し大きく調整 */
+    color: #ffffff !important; /* 強制的に白 */
+    font-size: 3.5rem; /* さらに大きく */
     text-decoration: none;
-    opacity: 1.0; /* 完全に鮮明にする */
+    opacity: 1 !important;
+    display: inline-block;
+    /* アイコンが浮き立つように影を追加 */
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+}
+
+.link-icon:hover {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+    transform: scale(1.05);
 }
 
 .footer {
