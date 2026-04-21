@@ -12,7 +12,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ヘッダー */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -56,7 +55,6 @@ body {
     text-align: center;
 }
 
-/* メインロゴエリア：完全に余計な装飾をオフ */
 .main-logo-area {
     width: 100%;
     min-height: 90vh;
@@ -66,17 +64,25 @@ body {
 }
 
 .logo-highlight-box {
-    background: transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
     padding: 0;
 }
 
+/* * 修正ポイント：
+ * filter: brightness(2) を適用し、
+ * ロゴの色はそのままに、明るさを2倍にして際立たせます。
+ */
 .main-logo {
     max-width: 700px;
     width: 100%;
     height: auto;
+    filter: brightness(2); /* 暗い背景でもロゴが見えるよう明るくする */
 }
 
-/* キャッチフレーズ：英語を上品に添える */
 .catchphrase-group {
     margin: 80px 0 120px;
     text-align: center;
@@ -91,13 +97,12 @@ body {
 
 .en-sub {
     margin: 15px 0 0 0;
-    font-size: 0.85rem; /* 小さめに設定 */
-    letter-spacing: 0.12em;
-    color: #666; /* 落ち着いたグレー */
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
     font-style: italic;
 }
 
-/* 動画 */
 .video-container {
     width: 100%;
     margin-bottom: 120px;
@@ -109,7 +114,6 @@ video {
     border-radius: 4px;
 }
 
-/* コンテンツセクション */
 .content {
     text-align: left;
     background-color: #111;
@@ -120,50 +124,47 @@ video {
 }
 
 h2 {
-    color: #555; /* 見出しはさらに暗くして洗練度アップ */
-    font-size: 0.9rem;
+    color: #666;
+    font-size: 1rem;
     letter-spacing: 0.3em;
-    margin-bottom: 30px;
-    text-transform: uppercase;
+    margin-bottom: 40px;
 }
 
-/* テキストグループ：日本語と英語の対比 */
 .text-group {
     line-height: 1.8;
 }
 
 .jp-text {
-    margin-bottom: 12px;
+    margin: 0 0 12px 0;
     font-size: 1rem;
-    color: #eee;
+    color: #f0f0f0;
 }
 
 .en-text {
     margin: 0;
-    font-size: 0.8rem;
-    color: #555; /* 英語は背景に馴染ませる */
+    font-size: 0.85rem;
+    opacity: 0.4;
     line-height: 1.6;
     font-style: italic;
     letter-spacing: 0.05em;
 }
 
 .works-item h3 {
-    margin: 0 0 15px 0;
-    font-size: 1.1rem;
+    margin: 0 0 20px 0;
+    font-size: 1.2rem;
     letter-spacing: 0.1em;
     color: #fff;
 }
 
-/* コンタクト・フッター */
 .link-icon {
     color: #fff;
     font-size: 2rem;
     text-decoration: none;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .footer {
     padding: 60px 0;
-    opacity: 0.2;
-    font-size: 0.75rem;
+    opacity: 0.3;
+    font-size: 0.8rem;
 }
