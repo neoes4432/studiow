@@ -1,4 +1,3 @@
-/* ベースとなる元のデザインを復元 */
 html {
     scroll-padding-top: 100px;
     scroll-behavior: smooth;
@@ -7,12 +6,13 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #0a0a0a; /* 真っ黒な背景 */
-    color: #f0f0f0; /* 文字は白 */
+    background-color: #0a0a0a;
+    color: #f0f0f0;
     font-family: "Helvetica Neue", Arial, sans-serif;
     overflow-x: hidden;
 }
 
+/* ヘッダー周りの視認性確保 */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -24,13 +24,13 @@ body {
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    background-color: rgba(10, 10, 10, 0.9); /* ヘッダーも黒 */
+    background-color: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
 
 .logo-link-white {
-    color: #fff !important;
+    color: #ffffff !important;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.4rem;
@@ -44,9 +44,10 @@ body {
 }
 
 .main-nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 .container {
@@ -56,124 +57,123 @@ body {
     text-align: center;
 }
 
+/* メインロゴエリアの修正 */
 .main-logo-area {
     width: 100%;
-    min-height: 90vh;
+    min-height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* * 修正ポイント：
- * ロゴの背後をぼんやり明るくしていた円形のグラデーション（rgba(255, 255, 255, 0.25)）を削除。
- * image_16.pngのような「黒背景にロゴのみ」の状態に戻しました。
- */
 .logo-highlight-box {
     position: relative;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: none; /* 背景グラデーションを削除 */
-    padding: 0; /* 不要なパディングを削除 */
 }
 
 /* * 修正ポイント：
- * filter: brightness(2.0) contrast(1.1) を適用し、
- * ロゴの色調は維持したまま、明度とコントラストを劇的に引き上げ、
- * 真っ黒な背景でもくっきりと見えるようにしました。
+ * invert(1) で色を反転させ、brightness(2) で輝度を最大化しました。
+ * これにより、元の画像が何色であっても「真っ白に近い状態」でくっきり表示されます。
  */
 .main-logo {
     max-width: 700px;
-    width: 100%;
+    width: 90%;
     height: auto;
-    filter: brightness(2.0) contrast(1.1); /* 暗い背景でもロゴが見えるよう明るくする */
+    filter: invert(1) brightness(2) contrast(1.2);
+    display: block;
 }
 
-/* キャッチフレーズのスタイル */
+/* キャッチフレーズのバランス調整 */
 .catchphrase-group {
-    margin: 80px 0 120px;
-    text-align: center;
+    margin: 100px 0 150px;
 }
 
 .catchphrase {
     margin: 0;
     font-size: 1.6rem;
-    letter-spacing: 0.15em;
-    color: #fff; /* 日本語はパキッとした白 */
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    line-height: 1.5;
 }
 
-/* 英語の追加スタイル（洗練さを維持） */
 .en-sub {
-    margin: 15px 0 0 0;
+    margin: 20px 0 0 0;
     font-size: 0.9rem;
-    letter-spacing: 0.1em;
-    opacity: 0.5; /* 透明度を下げて存在感を抑える */
-    font-style: italic; /* イタリック体でニュアンスを変える */
+    letter-spacing: 0.15em;
+    color: #888888;
+    font-style: italic;
 }
 
+/* 動画エリア */
 .video-container {
     width: 100%;
-    margin-bottom: 120px;
+    margin-bottom: 150px;
 }
 
 video {
     width: 100%;
-    border: 1px solid #222;
-    border-radius: 4px;
+    border: 1px solid #222222;
+    border-radius: 2px;
 }
 
+/* コンテンツセクション */
 .content {
     text-align: left;
-    background-color: #111; /* コンテンツエリアも黒系 */
-    border: 1px solid #222;
-    border-radius: 16px;
-    padding: 60px;
-    margin-bottom: 100px;
+    background-color: #0d0d0d;
+    border: 1px solid #1a1a1a;
+    border-radius: 0; /* よりシャープな印象に */
+    padding: 80px 60px;
+    margin-bottom: 120px;
 }
 
 h2 {
-    color: #666; /* 見出しはグレーで控えめに */
-    font-size: 1rem;
-    letter-spacing: 0.3em;
-    margin-bottom: 40px;
+    color: #444444;
+    font-size: 0.9rem;
+    letter-spacing: 0.4em;
+    margin-bottom: 50px;
+    text-transform: uppercase;
 }
 
-/* 日本語と英語のテキストグループ */
-.text-group {
-    line-height: 1.8;
-}
-
+/* テキストの読みやすさ調整 */
 .jp-text {
-    margin: 0 0 12px 0;
-    font-size: 1rem;
-    color: #f0f0f0;
+    margin: 0 0 15px 0;
+    font-size: 1.05rem;
+    color: #e0e0e0;
+    line-height: 1.9;
 }
 
 .en-text {
     margin: 0;
     font-size: 0.85rem;
-    opacity: 0.4; /* 英語はさらに透明度を下げ、背景に溶け込ませる */
-    line-height: 1.6;
+    color: #555555;
+    line-height: 1.7;
     font-style: italic;
-    letter-spacing: 0.05em;
 }
 
 .works-item h3 {
-    margin: 0 0 20px 0;
-    font-size: 1.2rem;
+    margin: 0 0 25px 0;
+    font-size: 1.3rem;
+    color: #ffffff;
     letter-spacing: 0.1em;
-    color: #fff;
 }
 
-.link-icon {
-    color: #fff;
-    font-size: 2rem;
-    text-decoration: none;
-    opacity: 0.8;
+/* メールアイコン */
+.social-links {
+    padding: 20px 0;
+}
+
+.link-icon i {
+    color: #ffffff !important;
+    font-size: 2.2rem;
+    opacity: 0.9;
 }
 
 .footer {
-    padding: 60px 0;
-    opacity: 0.3;
-    font-size: 0.8rem;
+    padding: 80px 0;
+    color: #333333;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
 }
