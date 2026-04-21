@@ -1,81 +1,179 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEB7GWDRES"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-SEB7GWDRES');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDIO W</title>
-    <link rel="icon" type="image/png" href="assets/ファビ.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* ベースとなる元のデザインを復元 */
+html {
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth;
+}
 
-<header class="page-header">
-    <h1>
-        <a href="index.html" class="logo-link-white">STUDIO W</a>
-    </h1>
-    <nav>
-        <ul class="main-nav">
-            <li><a href="#concept">Concept</a></li>
-            <li><a href="#works">Works</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a; /* 真っ黒な背景 */
+    color: #f0f0f0; /* 文字は白 */
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+}
 
-<div class="container">
-    <div class="main-logo-area">
-        <div class="logo-highlight-box">
-            <img class="main-logo" src="assets/アートボード 1.png" alt="STUDIO W Logo">
-        </div>
-    </div>
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(10, 10, 10, 0.9); /* ヘッダーも黒 */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
 
-    <div class="video-container">
-        <video src="assets/hpどうが4.mp4" autoplay muted loop playsinline controls></video>
-    </div>
+.logo-link-white {
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+    letter-spacing: 0.2em;
+}
 
-    <div class="catchphrase-group">
-        <h1 class="catchphrase">アナログな思考を、デジタルな洗練へ</h1>
-        <p class="en-sub">From analog thoughts to digital refinement.</p>
-    </div>
+.main-nav {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
 
-    <section id="concept" class="content">
-        <h2>Concept</h2>
-        <div class="text-group">
-            <p class="jp-text">情報の「源泉」を見極め、論理的な設計で「本質」へと導く。エンジニアとしての視点とクリエイターとしての感性を掛け合わせ、静謐かつ力強いコミュニケーションをデザインします。</p>
-            <p class="en-text">Identifying the "source" of information and leading to the "essence" through logical design. Combining an engineer's perspective with a creator's sensitivity to design quiet yet powerful communication.</p>
-        </div>
-    </section>
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
 
-    <section id="works" class="content">
-        <h2>Works</h2>
-        <div class="works-item">
-            <h3>STUDIO W Brand Movie</h3>
-            <div class="text-group">
-                <p class="jp-text">「起源・記録・蓄積・洗練・定着」の5工程で構成されたブランドムービー。</p>
-                <p class="en-text">A brand movie composed of five stages: Origin, Record, Accumulation, Refinement, and Establishment.</p>
-            </div>
-        </div>
-    </section>
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
 
-    <section id="contact" class="content">
-        <h2>Contact</h2>
-        <div class="social-links">
-            <a href="mailto:your-email@example.com" class="link-icon"><i class="fa-regular fa-envelope"></i></a>
-        </div>
-    </section>
+.main-logo-area {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    <footer class="footer">
-        <p>&copy; 2026 STUDIO W</p>
-    </footer>
-</div>
+/* * 修正ポイント：
+ * ロゴの背後をぼんやり明るくしていた円形のグラデーション（rgba(255, 255, 255, 0.25)）を削除。
+ * image_16.pngのような「黒背景にロゴのみ」の状態に戻しました。
+ */
+.logo-highlight-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none; /* 背景グラデーションを削除 */
+    padding: 0; /* 不要なパディングを削除 */
+}
 
-</body>
-</html>
+/* * 修正ポイント：
+ * filter: brightness(2.0) contrast(1.1) を適用し、
+ * ロゴの色調は維持したまま、明度とコントラストを劇的に引き上げ、
+ * 真っ黒な背景でもくっきりと見えるようにしました。
+ */
+.main-logo {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    filter: brightness(2.0) contrast(1.1); /* 暗い背景でもロゴが見えるよう明るくする */
+}
+
+/* キャッチフレーズのスタイル */
+.catchphrase-group {
+    margin: 80px 0 120px;
+    text-align: center;
+}
+
+.catchphrase {
+    margin: 0;
+    font-size: 1.6rem;
+    letter-spacing: 0.15em;
+    color: #fff; /* 日本語はパキッとした白 */
+}
+
+/* 英語の追加スタイル（洗練さを維持） */
+.en-sub {
+    margin: 15px 0 0 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    opacity: 0.5; /* 透明度を下げて存在感を抑える */
+    font-style: italic; /* イタリック体でニュアンスを変える */
+}
+
+.video-container {
+    width: 100%;
+    margin-bottom: 120px;
+}
+
+video {
+    width: 100%;
+    border: 1px solid #222;
+    border-radius: 4px;
+}
+
+.content {
+    text-align: left;
+    background-color: #111; /* コンテンツエリアも黒系 */
+    border: 1px solid #222;
+    border-radius: 16px;
+    padding: 60px;
+    margin-bottom: 100px;
+}
+
+h2 {
+    color: #666; /* 見出しはグレーで控えめに */
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 40px;
+}
+
+/* 日本語と英語のテキストグループ */
+.text-group {
+    line-height: 1.8;
+}
+
+.jp-text {
+    margin: 0 0 12px 0;
+    font-size: 1rem;
+    color: #f0f0f0;
+}
+
+.en-text {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.4; /* 英語はさらに透明度を下げ、背景に溶け込ませる */
+    line-height: 1.6;
+    font-style: italic;
+    letter-spacing: 0.05em;
+}
+
+.works-item h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+
+.link-icon {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer {
+    padding: 60px 0;
+    opacity: 0.3;
+    font-size: 0.8rem;
+}
