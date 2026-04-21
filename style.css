@@ -63,27 +63,26 @@ body {
     align-items: center;
 }
 
-/* * 修正ポイント：
- * ロゴの背後に「柔らかな白い光（グラデーション）」を配置しました。
- * これにより、ロゴの「紺色」を維持したまま、黒背景からくっきりと浮かび上がらせます。
+/* 修正ポイント：
+ * ロゴの背後に、元のデザインを邪魔しない「ごく薄い白のグラデーション」を敷きました。
+ * これにより、紺色のロゴが黒背景に沈むのを防ぎ、輪郭をはっきりさせます。
  */
 .logo-highlight-box {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
     padding: 100px;
 }
 
-/* * 修正ポイント：
- * filterを削除し、ロゴの元の色を100%表示します。
+/* 修正ポイント：
+ * ロゴの色を変えるfilter（brightnessやinvert）をすべて削除しました。
+ * これで元の紺色がそのまま表示されます。
  */
 .main-logo {
     max-width: 700px;
     width: 100%;
     height: auto;
-    filter: none !important;
     display: block;
 }
 
