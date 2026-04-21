@@ -1,3 +1,4 @@
+/* すべてを上書きしてください */
 html {
     scroll-padding-top: 100px;
     scroll-behavior: smooth;
@@ -6,13 +7,11 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #0a0a0a;
-    color: #f0f0f0;
+    background-color: #000000 !important; /* 背景を完全な黒に固定 */
+    color: #ffffff;
     font-family: "Helvetica Neue", Arial, sans-serif;
-    overflow-x: hidden;
 }
 
-/* ヘッダー：デザインを損なわず文字を際立たせる */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -21,11 +20,9 @@ body {
     height: 80px;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     box-sizing: border-box;
-    background-color: rgba(10, 10, 10, 0.98);
-    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.9);
     z-index: 1000;
 }
 
@@ -33,151 +30,68 @@ body {
     color: #ffffff !important;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.4rem;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.2em;
 }
 
 .main-nav {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 30px;
 }
 
 .main-nav a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    opacity: 0.9;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-/* メインロゴエリア：間違いなく見えるように修正 */
 .main-logo-area {
     width: 100%;
-    min-height: 95vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 80px;
 }
 
-.logo-highlight-box {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* * 【重要修正】
- * brightness(0) invert(1) を組み合わせることで、
- * 元がどんなに暗い紺色であっても、一度真っ黒にしてから反転させ、
- * 「強制的に純白」として表示させます。これで絶対に見えるようになります。
+/* * 【ここが最重要修正】
+ * どんな画像でも強制的に白くし、さらに外側に白い光（ドロップシャドウ）をつけました。
+ * これで黒背景でも絶対に見えるようになります。
  */
 .main-logo {
-    max-width: 650px;
-    width: 85%;
+    max-width: 600px;
+    width: 80%;
     height: auto;
-    filter: brightness(0) invert(1); 
-    display: block;
+    filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)) !important;
+    display: block !important;
 }
 
-/* キャッチフレーズ：静謐な高級感 */
 .catchphrase-group {
-    margin: 120px 0 180px;
+    margin: 100px 0;
+    text-align: center;
 }
 
 .catchphrase {
-    margin: 0;
-    font-size: 1.7rem;
-    letter-spacing: 0.25em;
-    color: #ffffff;
-    line-height: 1.8;
-}
-
-.en-sub {
-    margin: 25px 0 0 0;
-    font-size: 0.9rem;
+    font-size: 1.6rem;
     letter-spacing: 0.2em;
-    color: #666666;
-    font-style: italic;
+    color: #ffffff;
 }
 
-/* 動画：エッジを立てる */
-.video-container {
-    width: 100%;
-    margin-bottom: 180px;
-}
-
-video {
-    width: 100%;
-    border: 1px solid #333333;
-    border-radius: 0;
-}
-
-/* コンテンツ：バランスと余白の改善 */
 .content {
+    max-width: 900px;
+    margin: 0 auto 100px;
+    padding: 60px;
+    background-color: #0a0a0a;
+    border: 1px solid #222;
     text-align: left;
-    background-color: #0d0d0d;
-    border: 1px solid #1a1a1a;
-    padding: 100px 80px;
-    margin-bottom: 150px;
-}
-
-h2 {
-    color: #555555;
-    font-size: 0.85rem;
-    letter-spacing: 0.5em;
-    margin-bottom: 60px;
-    text-transform: uppercase;
-    border-bottom: 1px solid #222222;
-    padding-bottom: 15px;
-    display: inline-block;
 }
 
 .jp-text {
-    margin: 0 0 20px 0;
-    font-size: 1.1rem;
+    line-height: 2;
     color: #e0e0e0;
-    line-height: 2.0;
-}
-
-.en-text {
-    margin: 0;
-    font-size: 0.85rem;
-    color: #444444;
-    line-height: 1.8;
-    font-style: italic;
-}
-
-.works-item h3 {
-    margin: 0 0 30px 0;
-    font-size: 1.4rem;
-    color: #ffffff;
-    letter-spacing: 0.15em;
-}
-
-/* Contact：アイコンの視認性 */
-.social-links {
-    padding: 20px 0;
-}
-
-.link-icon i {
-    color: #ffffff !important;
-    font-size: 2.5rem;
-    opacity: 1;
 }
 
 .footer {
-    padding: 100px 0;
-    color: #222222;
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
+    padding: 50px 0;
+    text-align: center;
+    color: #444;
 }
