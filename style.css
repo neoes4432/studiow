@@ -30,7 +30,7 @@ body {
 }
 
 .logo-link-white {
-    color: #ffffff;
+    color: #ffffff !important;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.4rem;
@@ -56,7 +56,7 @@ body {
     text-align: center;
 }
 
-/* ロゴの視認性修正：洗練された落ち着きを復元 */
+/* メインロゴ：ノイズを除去し、静かに浮かび上がらせる */
 .main-logo-area {
     width: 100%;
     min-height: 90vh;
@@ -65,22 +65,12 @@ body {
     align-items: center;
 }
 
-.logo-highlight-box {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* 不要な円形グラデーションとパディングを削除 */
-    background: none;
-    padding: 0;
-}
-
 .main-logo {
     max-width: 700px;
     width: 100%;
     height: auto;
-    /* 極端な明るさと強い影を削除し、背景に馴染ませる */
-    filter: brightness(1.8) drop-shadow(0 0 5px rgba(255, 255, 255, 0.05));
+    /* 発光や影をすべて削除。明るさのみを上品に調整 */
+    filter: brightness(2.2); 
 }
 
 /* キャッチフレーズ */
@@ -99,8 +89,7 @@ body {
     margin: 15px 0 0 0;
     font-size: 0.9rem;
     letter-spacing: 0.12em;
-    /* 英語をさらに暗くし、背景に溶け込ませる */
-    color: #777; 
+    color: #666; /* 英語は背景に馴染ませる */
     font-style: italic;
 }
 
@@ -127,7 +116,7 @@ video {
 }
 
 h2 {
-    color: #555; /* 見出しを暗く控えめに */
+    color: #555;
     font-size: 0.9rem;
     letter-spacing: 0.3em;
     margin-bottom: 30px;
@@ -147,8 +136,7 @@ h2 {
 .en-text {
     margin: 0;
     font-size: 0.8rem;
-    /* 英語をさらに暗くし、背景に溶け込ませる */
-    color: #777; 
+    color: #555; /* 英語はさらに暗くして日本語を立てる */
     line-height: 1.6;
     font-style: italic;
 }
@@ -160,28 +148,21 @@ h2 {
     color: #fff;
 }
 
-/* メールマークの視認性修正：洗練された落ち着きを復元 */
-.social-links {
-    padding: 20px 0;
-}
-
+/* コンタクト：純白で静かに配置 */
 .link-icon i {
-    color: #ffffff; /* 白色のまま */
-    font-size: 3rem; /* サイズを少し小さく */
+    color: #ffffff !important;
+    font-size: 3rem;
     opacity: 1;
-    /* 不要な強い影を削除 */
-    filter: none; 
+    filter: none; /* ぼやけた光（drop-shadow）を削除 */
     transition: transform 0.3s ease;
 }
 
 .link-icon i:hover {
     transform: scale(1.05);
-    /* 不要なホバー時の強い影を削除 */
-    filter: none;
 }
 
 .footer {
     padding: 60px 0;
-    opacity: 0.3;
+    opacity: 0.2;
     font-size: 0.8rem;
 }
