@@ -6,7 +6,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #0a0a0a; /* 真っ黒な背景 */
+    background-color: #0a0a0a;
     color: #f0f0f0;
     font-family: "Helvetica Neue", Arial, sans-serif;
     overflow-x: hidden;
@@ -55,6 +55,7 @@ body {
     text-align: center;
 }
 
+/* メインロゴエリア：背後を明るく調整 */
 .main-logo-area {
     width: 100%;
     min-height: 90vh;
@@ -68,21 +69,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: none;
-    padding: 0;
+    /* ロゴの背後だけに薄い光を当てる（スポットライト効果） */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+    padding: 100px;
+    border-radius: 50%;
 }
 
-/* * 修正ポイント：
- * filter: brightness(2) を適用し、
- * ロゴの色はそのままに、明るさを2倍にして際立たせます。
- */
 .main-logo {
     max-width: 700px;
     width: 100%;
     height: auto;
-    filter: brightness(2); /* 暗い背景でもロゴが見えるよう明るくする */
+    /* ロゴ自体の露出を少し上げる */
+    filter: brightness(1.2);
 }
 
+/* キャッチフレーズ */
 .catchphrase-group {
     margin: 80px 0 120px;
     text-align: center;
@@ -97,12 +98,13 @@ body {
 
 .en-sub {
     margin: 15px 0 0 0;
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
-    opacity: 0.5;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    color: #666;
     font-style: italic;
 }
 
+/* 動画 */
 .video-container {
     width: 100%;
     margin-bottom: 120px;
@@ -114,6 +116,7 @@ video {
     border-radius: 4px;
 }
 
+/* コンテンツ */
 .content {
     text-align: left;
     background-color: #111;
@@ -124,10 +127,11 @@ video {
 }
 
 h2 {
-    color: #666;
-    font-size: 1rem;
+    color: #444;
+    font-size: 0.9rem;
     letter-spacing: 0.3em;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
 .text-group {
@@ -135,36 +139,28 @@ h2 {
 }
 
 .jp-text {
-    margin: 0 0 12px 0;
+    margin-bottom: 12px;
     font-size: 1rem;
-    color: #f0f0f0;
+    color: #eee;
 }
 
 .en-text {
     margin: 0;
-    font-size: 0.85rem;
-    opacity: 0.4;
+    font-size: 0.8rem;
+    color: #444;
     line-height: 1.6;
     font-style: italic;
-    letter-spacing: 0.05em;
 }
 
 .works-item h3 {
-    margin: 0 0 20px 0;
-    font-size: 1.2rem;
+    margin: 0 0 15px 0;
+    font-size: 1.1rem;
     letter-spacing: 0.1em;
     color: #fff;
 }
 
-.link-icon {
-    color: #fff;
-    font-size: 2rem;
-    text-decoration: none;
-    opacity: 0.8;
-}
-
 .footer {
     padding: 60px 0;
-    opacity: 0.3;
-    font-size: 0.8rem;
+    opacity: 0.2;
+    font-size: 0.75rem;
 }
